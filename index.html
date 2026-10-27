@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Detective consultor en Baker Street, Londres</title>
+<meta name="description" content="Detective consultor independiente. Deducción humana, artesanal y sin algoritmos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --fondo: #F7F5F0;
+    --texto: #2B2B2B;
+    --acento: #1F3A5F;
+    --titulares: "Libre Baskerville", Baskerville, Georgia, "Times New Roman", serif;
+    --cuerpo: "Source Serif 4", Georgia, "Times New Roman", serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: var(--cuerpo);
+    font-size: 19px;
+    line-height: 1.75;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  .contenedor {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  section { padding: 50px 0; }
+
+  h1, h2, h3 {
+    font-family: var(--titulares);
+    font-weight: 700;
+    color: var(--acento);
+    line-height: 1.2;
+  }
+
+  h1 { font-size: 56px; max-width: 18em; }
+  h2 { font-size: 48px; margin-bottom: 40px; }
+  h3 { font-size: 20px; line-height: 1.35; margin-bottom: 12px; }
+
+  /* Hero */
+  .hero { padding-top: 70px; }
+  .hero .profesion {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+  .hero .lugar {
+    margin-top: 28px;
+    margin-bottom: 40px;
+    font-size: 20px;
+  }
+
+  .boton {
+    display: inline-block;
+    background: var(--acento);
+    color: var(--fondo);
+    font-family: var(--cuerpo);
+    font-weight: 600;
+    font-size: 19px;
+    text-decoration: none;
+    padding: 16px 34px;
+    border: 2px solid var(--acento);
+    border-radius: 2px;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .boton:hover { background: var(--fondo); color: var(--acento); }
+  .boton:focus-visible,
+  a:focus-visible { outline: 3px solid var(--acento); outline-offset: 3px; }
+
+  /* Servicios */
+  .servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 28px;
+  }
+  .tarjeta {
+    border: 1px solid var(--acento);
+    border-top: 5px solid var(--acento);
+    padding: 28px 26px 30px;
+  }
+  .tarjeta p { font-size: 17.5px; }
+
+  /* Sobre mí */
+  .sobre p { max-width: 38em; margin-bottom: 22px; }
+  .sobre p:last-child { margin-bottom: 0; }
+
+  /* Ubicación */
+  .ubicacion p { font-size: 22px; }
+
+  /* Contacto */
+  .contacto .lista { list-style: none; }
+  .contacto li { margin-bottom: 18px; font-size: 21px; }
+  .contacto a {
+    color: var(--acento);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  .contacto .nota {
+    margin-top: 28px;
+    font-style: italic;
+    font-size: 18px;
+    max-width: 34em;
+  }
+
+  /* Pie */
+  footer {
+    border-top: 1px solid var(--acento);
+    padding: 30px 0 40px;
+    font-size: 16px;
+  }
+
+  @media (max-width: 720px) {
+    body { font-size: 18px; }
+    section { padding: 30px 0; }
+    .contenedor { padding: 0 22px; }
+    h1 { font-size: 36px; }
+    h2 { font-size: 32px; margin-bottom: 28px; }
+    .hero { padding-top: 40px; }
+    .boton { display: block; text-align: center; }
+    .contacto li { font-size: 19px; word-break: break-word; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .boton { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<main>
+  <section class="hero">
+    <div class="contenedor">
+      <p class="profesion">Sherlock Holmes, detective consultor</p>
+      <h1>Deducción humana, artesanal y sin algoritmos. Para casos que la máquina no puede resolver</h1>
+      <p class="lugar">Baker Street, Londres</p>
+      <a class="boton" href="mailto:holmes@sherlockholmes.co.uk">Escribirme un correo</a>
+    </div>
+  </section>
+
+  <section class="servicios" id="servicios">
+    <div class="contenedor">
+      <h2>Servicios</h2>
+      <div class="servicios-grid">
+        <article class="tarjeta">
+          <h3>Investigación de casos complejos archivados por la policía</h3>
+          <p>Intervención en los asuntos que Scotland Yard ha catalogado como callejones sin salida al fiarse de sus sistemas automatizados.</p>
+        </article>
+        <article class="tarjeta">
+          <h3>Análisis de comportamiento humano</h3>
+          <p>Motivaciones, microexpresiones y anomalías psicológicas: lo que una inteligencia artificial no puede interpretar.</p>
+        </article>
+        <article class="tarjeta">
+          <h3>Consultoría de riesgos internos para corporaciones</h3>
+          <p>Identificación de fraudes, espionaje o deslealtades antes de que el daño sea irreparable.</p>
+        </article>
+        <article class="tarjeta">
+          <h3>Localización de personas desaparecidas</h3>
+          <p>Reconstrucción del rastro basada en hábitos y lógica deductiva, sorteando los puntos ciegos de cámaras y sensores urbanos.</p>
+        </article>
+        <article class="tarjeta">
+          <h3>Verificación de testimonios y detección de mentiras</h3>
+          <p>Examen implacable de declaraciones para separar el hecho irrefutable de la falacia calculada.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sobre" id="sobre-mi">
+    <div class="contenedor">
+      <h2>Sobre mí</h2>
+      <p>Ejerzo como consultor independiente desde 1887 —haga el cálculo usted mismo, si su mente se lo permite—, aplicando la observación minuciosa y el método analítico a los enigmas que la sociedad da por perdidos.</p>
+      <p>Mi enfoque es categóricamente obsesivo: no descanso, no hago pausas ni cierro un expediente hasta haber desentrañado la verdad objetiva, rechazando las conclusiones apresuradas que hoy dictan las pantallas.</p>
+      <p>Durante décadas conté con la leal compañía de mi antiguo colaborador, el doctor Watson... él sí que me entendía y sabía registrar la esencia de este oficio; hoy mantengo intacto ese mismo rigor humano para quienes se niegan a dejar su destino en manos de un cálculo probabilístico.</p>
+    </div>
+  </section>
+
+  <section class="ubicacion" id="ubicacion">
+    <div class="contenedor">
+      <h2>Ubicación</h2>
+      <p>Baker Street, Londres</p>
+    </div>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <div class="contenedor">
+      <h2>Contacto</h2>
+      <ul class="lista">
+        <li>Correo electrónico: <a href="mailto:holmes@sherlockholmes.co.uk">holmes@sherlockholmes.co.uk</a></li>
+        <li>Teléfono: <a href="tel:+442079460144">+44 20 7946 0144</a></li>
+      </ul>
+      <p class="nota">Reviso mi correspondencia cada 72 horas. Exponga primero los hechos por escrito.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="contenedor">
+    <p>&copy; 2026 Sherlock Holmes. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+</body>
+</html>
